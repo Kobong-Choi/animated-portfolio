@@ -29,3 +29,16 @@ section {
   // 각 섹션이 스크롤 시 화면 중앙에 맞춰 정렬되도록 합니다.
   scroll-snap-align: center;
 }
+
+.course {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+  }
+}
