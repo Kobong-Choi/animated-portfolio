@@ -1,0 +1,31 @@
+html {
+  /* 스크롤 스냅이 작동할 방향과 강도를 설정합니다.
+     y mandatory는 수직 방향으로 스크롤할 때 스냅을 활성화하며, 사용자가 스크롤할 때 반드시 스냅 지점에서 정렬되도록 합니다.
+     즉, 페이지를 수직으로 스크롤할 때 각 섹션이 정확히 화면 중앙에 맞춰지게 됩니다. */
+  scroll-snap-type: y mandatory;
+  // 스크롤 동작의 애니메이션 효과를 설정합니다.
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  // 각 섹션이 스크롤 시 화면 중앙에 맞춰 정렬되도록 합니다.
+  scroll-snap-align: center;
+}
