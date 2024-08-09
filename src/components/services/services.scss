@@ -7,9 +7,9 @@
 
   .textContainer {
     flex: 1;
-    align-self: flex-end;
     display: flex;
     align-items: center;
+    align-self: flex-end;
     gap: 20px;
 
     p {
@@ -60,6 +60,7 @@
       }
     }
   }
+
   .listContainer {
     flex: 2;
     display: flex;

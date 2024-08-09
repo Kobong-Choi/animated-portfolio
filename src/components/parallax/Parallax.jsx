@@ -1,10 +1,11 @@
-/* 패럴랙스 효과: framer-motion의 useScroll과 useTransform을 사용하여 사용자가 페이지를 스크롤할 때 부드러운 패럴랙스 애니메이션을 구현합니다.
+/* 패럴랙스 효과:
+   framer-motion의 useScroll과 useTransform을 사용하여 사용자가 페이지를 스크롤할 때 부드러운 패럴랙스 애니메이션을 구현합니다.
    각기 다른 요소들이 서로 다른 속도로 움직이며 레이어의 깊이감을 만듭니다. */
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 import "./parallax.scss";
-import { useRef } from "react";
 
 const Parallax = ({ type }) => {
   const ref = useRef();
@@ -14,8 +15,8 @@ const Parallax = ({ type }) => {
     // 스크롤 위치를 계산할 참조 요소입니다.
     target: ref,
     // 스크롤의 시작과 끝을 정의하는 설정입니다.
-    // 요소의 상단이 뷰포트의 상단과 만나면 스크롤 애니메이션이 시작됩니다.
-    // 요소의 하단이 뷰포트의 상단과 만나면 스크롤 애니메이션이 끝납니다.
+    // "start start": 요소의 상단이 뷰포트의 상단과 만나면 스크롤 애니메이션이 시작됩니다.
+    // "end start": 요소의 하단이 뷰포트의 상단과 만나면 스크롤 애니메이션이 끝납니다.
     offset: ["start start", "end start"],
   });
 
